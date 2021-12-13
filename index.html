@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Weather</title>
+
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="min-h-screen flex">
+		<div
+			id="sidedock"
+			class="
+				bg-[#4e73df]
+				w-[250px]
+				min-h-full
+				flex flex-col
+				px-4
+				relative
+				items-center
+				py-2
+				pb-4
+			"
+		>
+			<div
+				class="
+					m-auto
+					py-4
+					text-2xl
+					font-bold
+					text-transparent
+					bg-gradient-to-r
+					from-pink-500
+					via-yellow-500
+					to-orange-500
+					bg-clip-text
+				"
+			>
+				METEOROLOG
+			</div>
+			<div
+				class="
+					flex-1
+					mx-auto
+					text-center
+					flex flex-col
+					gap-2
+					text-gray-300 text-xl
+					justify-evenly
+				"
+			>
+				<div class="">Dashboard</div>
+				<div class="">Statistics</div>
+				<div class="">Map</div>
+				<div class="">Calendar</div>
+				<div class="">Settings</div>
+			</div>
+
+			<div class="mt-4 bg-white p-4 rounded-md text-lg">
+				<!-- <img class="rounded-md" src="img/sidecard.jpg" /> -->
+				<div class="text-black">
+					<!-- Humidity: <span class="humidity">xx</span> -->
+					<div class="text-center text-orange-600 mb-4">
+						<div class="current-temp text-5xl">--</div>
+						<div class="location text-2xl">Kota, IN</div>
+					</div>
+
+					<div>Pressure: <span class="pressure">--</span></div>
+					<div>
+						Wind: <span class="wind-speed">--</span>
+						<span class="wind-deg">--</span>
+					</div>
+					Precipitation: <span class="prec">--</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex-1 ml-1 h-screen overflow-auto">
+			<div class="mt-1">
+				<input
+					id="searchbox"
+					class="bg-gray-200 rounded-md p-2"
+					type="text"
+					placeholder="Enter a city"
+				/>
+				<button
+					class="bg-gray-700 text-white p-2 rounded-lg text-sm"
+					id="search_btn"
+				>
+					GO
+				</button>
+			</div>
+
+			<div class="">
+				<div class="text-2xl font-bold py-8 px-2 pt-2">Weather Forecast</div>
+				<div class="flex justify-center gap-8 mt-2">
+					<div class="hover:scale-105 transition">
+						<img class="rounded-lg h-40 w-44 shadow-lg" src="img/london.jpg" />
+						<div class="text-lg text-center w-full text-gray-600">London</div>
+					</div>
+					<div class="hover:scale-105 transition">
+						<img class="rounded-lg h-40 w-44 shadow-lg" src="img/paris.jpg" />
+						<div class="text-lg text-center w-full text-gray-600">Paris</div>
+					</div>
+					<div class="hover:scale-105 transition">
+						<img class="rounded-lg h-40 w-44 shadow-lg" src="img/mumbai.jpg" />
+						<div class="text-lg text-center w-full text-gray-600">Mumbai</div>
+					</div>
+					<div class="hover:scale-105 transition">
+						<img class="rounded-lg h-40 w-44 shadow-lg" src="img/sydney.jpg" />
+						<div class="text-lg text-center w-full text-gray-600">Sydney</div>
+					</div>
+					<div class="hover:scale-105 transition">
+						<img class="rounded-lg h-40 w-44 shadow-lg" src="img/newyork.jpg" />
+						<div class="text-lg text-center w-full text-gray-600">New York</div>
+					</div>
+				</div>
+
+				<div class="text-xl font-bold py-4 px-2">London</div>
+				<div class="flex justify-center gap-4 mt-2">
+					<div
+						class="
+							hover:scale-105
+							transition
+							flex flex-col
+							items-center
+							border-2
+							px-4
+							py-2
+							rounded-lg
+						"
+					>
+						<img class="rounded-full h-10 w-10 shadow-lg" src="img/snow.png" />
+						<div class="text-xs text-center w-full text-gray-600 mx-auto mt-2">
+							-5/+4<br />11 Mon
+						</div>
+					</div>
+					<div
+						class="
+							hover:scale-105
+							transition
+							flex flex-col
+							items-center
+							border-2
+							px-4
+							py-2
+							rounded-lg
+						"
+					>
+						<img class="rounded-full h-10 w-10 shadow-lg" src="img/snow.png" />
+						<div class="text-xs text-center w-full text-gray-600 mx-auto mt-2">
+							-5/+4<br />12 Mon
+						</div>
+					</div>
+					<div
+						class="
+							hover:scale-105
+							transition
+							flex flex-col
+							items-center
+							border-2
+							px-4
+							py-2
+							rounded-lg
+						"
+					>
+						<img class="rounded-full h-10 w-10 shadow-lg" src="img/sunny.png" />
+						<div class="text-xs text-center w-full text-gray-600 mx-auto mt-2">
+							-5/+4<br />13 Mon
+						</div>
+					</div>
+					<div
+						class="
+							hover:scale-105
+							transition
+							flex flex-col
+							items-center
+							border-2
+							px-4
+							py-2
+							rounded-lg
+						"
+					>
+						<img class="rounded-full h-10 w-10 shadow-lg" src="img/sun.png" />
+						<div class="text-xs text-center w-full text-gray-600 mx-auto mt-2">
+							-5/+4<br />14 Mon
+						</div>
+					</div>
+					<div
+						class="
+							hover:scale-105
+							transition
+							flex flex-col
+							items-center
+							border-2
+							px-4
+							py-2
+							rounded-lg
+						"
+					>
+						<img class="rounded-full h-10 w-10 shadow-lg" src="img/sun.png" />
+						<div class="text-xs text-center w-full text-gray-600 mx-auto mt-2">
+							-5/+4<br />15 Mon
+						</div>
+					</div>
+					<div
+						class="
+							hover:scale-105
+							transition
+							flex flex-col
+							items-center
+							border-2
+							px-4
+							py-2
+							rounded-lg
+						"
+					>
+						<img class="rounded-full h-10 w-10 shadow-lg" src="img/sunny.png" />
+						<div class="text-xs text-center w-full text-gray-600 mx-auto mt-2">
+							-5/+4<br />16 Mon
+						</div>
+					</div>
+					<div
+						class="
+							hover:scale-105
+							transition
+							flex flex-col
+							items-center
+							border-2
+							px-4
+							py-2
+							rounded-lg
+						"
+					>
+						<img class="rounded-full h-10 w-10 shadow-lg" src="img/sunny.png" />
+						<div class="text-xs text-center w-full text-gray-600 mx-auto mt-2">
+							-5/+4<br />17 Mon
+						</div>
+					</div>
+					<div
+						class="
+							hover:scale-105
+							transition
+							flex flex-col
+							items-center
+							border-2
+							px-4
+							py-2
+							rounded-lg
+						"
+					>
+						<img class="rounded-full h-10 w-10 shadow-lg" src="img/snow.png" />
+						<div class="text-xs text-center w-full text-gray-600 mx-auto mt-2">
+							-5/+4<br />18 Mon
+						</div>
+					</div>
+					<div
+						class="
+							hover:scale-105
+							transition
+							flex flex-col
+							items-center
+							border-2
+							px-4
+							py-2
+							rounded-lg
+						"
+					>
+						<img class="rounded-full h-10 w-10 shadow-lg" src="img/snow.png" />
+						<div class="text-xs text-center w-full text-gray-600 mx-auto mt-2">
+							-5/+4<br />19 Mon
+						</div>
+					</div>
+					<div
+						class="
+							hover:scale-105
+							transition
+							flex flex-col
+							items-center
+							border-2
+							px-4
+							py-2
+							rounded-lg
+						"
+					>
+						<img class="rounded-full h-10 w-10 shadow-lg" src="img/sunny.png" />
+						<div class="text-xs text-center w-full text-gray-600 mx-auto mt-2">
+							-5/+4<br />20 Mon
+						</div>
+					</div>
+					<div
+						class="
+							hover:scale-105
+							transition
+							flex flex-col
+							items-center
+							border-2
+							px-4
+							py-2
+							rounded-lg
+						"
+					>
+						<img class="rounded-full h-10 w-10 shadow-lg" src="img/sun.png" />
+						<div class="text-xs text-center w-full text-gray-600 mx-auto mt-2">
+							-5/+4<br />21 Mon
+						</div>
+					</div>
+				</div>
+
+				<div class="text-xl font-bold py-4 px-2">Weather graph</div>
+				<div class="px-2 mb-4">
+					<img class="" src="img/canvas.png" />
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<script src="index.js"></script>
+	</body>
+</html>
